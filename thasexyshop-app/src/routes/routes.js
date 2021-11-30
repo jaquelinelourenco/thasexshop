@@ -1,28 +1,21 @@
 import React from 'react';
-import {BrowserRouter as Routes, Route, Router} from "react-router-dom"
+import { Routes, Route} from "react-router-dom"
 import { HomePage } from "../pages/HomePage"
 import { CartPage } from "../pages/CartPage"
 import { LoginPage } from "../pages/LoginPage"
 
-export const RouterWrapp = () => {
+export default function RouterWrapp() {
     return(
-        <Router>
-            <Routes>
-                <Route path='../pages/LoginPage.js'>
-                    element={ <LoginPage /> }
-                </Route>
 
-                <Route path='../pages/HomePage.js'>
-                    element={ <HomePage /> }
-                </Route>
+        <Routes>
 
-                <Route path='../pages/CartPage.js'>
-                    element={ <CartPage /> }
-                </Route>
-                <Route>
-                    "Erro 404 - Página não existe!"
-                </Route>
-            </Routes>
-        </Router>
+            <Route path='/' element={ <LoginPage /> } />
+
+            <Route path='/home' element={ <HomePage /> } />
+
+            <Route path='/cart' element={ <CartPage /> } />
+
+        </Routes>
+
     )
 }
