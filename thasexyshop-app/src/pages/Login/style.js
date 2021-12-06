@@ -2,10 +2,12 @@ import styled from "styled-components";
 import { darken } from 'polished';
 
 export const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
+  width: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
+  background: black;
   h1{
     color: #ab0243;
   }
@@ -19,14 +21,15 @@ export const Content = styled.div`
   img{
     height:200px;
     width:250px;
-    border-radius: 10px
+    border-radius: 100px
+    margin-top: 0px;
   }
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 20px;
     input {
-      height: 40px;
+      height: 20px;
       border-radius: 4px;
       padding: 10px;
       border: 1px solid #1f1f1f;
@@ -38,12 +41,13 @@ export const Content = styled.div`
       border-radius: 5px;
       background: #f50a0a;
       border: none;
-      color: #ab0243;
+      color: black;
       text-transform: uppercase;
       font-size: 18px;
       font-weight: bold;
       &:hover {
         background: ${darken(0.08, "#ab0202")};
+        cursor: pointer;
       }
     }
   }
